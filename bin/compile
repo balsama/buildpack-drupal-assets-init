@@ -14,6 +14,8 @@ ls -la
 
 ./assets init
 
+ls -la
+
 ./assets fetch bower-asset/dropzone
 ./assets process bower-asset/dropzone
 ./assets rehash bower-asset/dropzone
