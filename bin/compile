@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Initializes the app with dropzone.
+
+set -ev
+
+./assets init
+
+./assets fetch bower-asset/dropzone
+./assets process bower-asset/dropzone
+./assets rehash bower-asset/dropzone
+
+chmod -R 744 www
+
+ls -la
