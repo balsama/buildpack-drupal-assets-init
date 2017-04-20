@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Trust me... this is a PHP app."
+exit 0
