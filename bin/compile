@@ -15,9 +15,9 @@ cd $build_dir
 drupal_libraries=(dropzone)
 
 for library in ${drupal_libraries[@]}; do
-  ./assets fetch bower-asset/dropzone
-  ./assets process bower-asset/dropzone
-  ./assets rehash bower-asset/dropzone
+  ./assets fetch bower-asset/${library}
+  ./assets process bower-asset/${library}
+  ./assets rehash bower-asset/${library}
 
 done
 
