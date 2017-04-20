@@ -12,8 +12,13 @@ cd $build_dir
 
 ./assets init
 
-./assets fetch bower-asset/dropzone
-./assets process bower-asset/dropzone
-./assets rehash bower-asset/dropzone
+drupal_libraries=(dropzone)
+
+for library in ${drupal_libraries[@]}; do
+  ./assets fetch bower-asset/dropzone
+  ./assets process bower-asset/dropzone
+  ./assets rehash bower-asset/dropzone
+
+done
 
 chmod -R 744 www
