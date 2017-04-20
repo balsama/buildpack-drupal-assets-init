@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
-
 # Initializes the app with dropzone.
 
 set -ev
 
-assets init
+# Configure directories
+build_dir=$1
+cache_dir=$2
+env_dir=$3
 
-assets fetch bower-asset/dropzone
-assets process bower-asset/dropzone
-assets rehash bower-asset/dropzone
+cd $build_dir
+
+ls -la
+
+./assets init
+
+./assets fetch bower-asset/dropzone
+./assets process bower-asset/dropzone
+./assets rehash bower-asset/dropzone
 
 chmod -R 744 www
 
