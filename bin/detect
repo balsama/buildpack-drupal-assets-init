@@ -1,4 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-echo "Trust me... this is a PHP app."
-exit 0
+# This pack is valid for apps with an `assets` file in approot
+if [ -f $1/assets ]; then
+  echo "This is Drupal Assets."
+  exit 0
+else
+  exit 1
+fi
