@@ -21,4 +21,4 @@ for library in ${drupal_libraries[@]}; do
 
 done
 
-chmod -R 744 www
+ls
